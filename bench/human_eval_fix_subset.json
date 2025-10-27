@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sum_two",
+    "buggy_code": "def sum_two(a, b):\n    # returns the sum of two numbers\n    return a - b\n",
+    "test_code": "def test_sum_two():\n    assert sum_two(2, 3) == 5\n    assert sum_two(-1, 1) == 0\n"
+  },
+  {
+    "id": "is_palindrome",
+    "buggy_code": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == ''.join(reversed(s))\n",
+    "test_code": "def test_palindrome():\n    assert is_palindrome('Race car')\n    assert not is_palindrome('hello')\n"
+  },
+  {
+    "id": "factorial",
+    "buggy_code": "def factorial(n):\n    # buggy: doesn't handle n==0\n    res = 1\n    for i in range(1, n):\n        res *= i\n    return res\n",
+    "test_code": "def test_fact():\n    assert factorial(0) == 1\n    assert factorial(5) == 120\n"
+  }
+]
